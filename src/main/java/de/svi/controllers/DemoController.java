@@ -71,11 +71,9 @@ public class DemoController {
   @GetMapping(value = "/test")
   public ResponseEntity<String> getTestString() {
     
-    for (Entry<String, String> envvar : System.getenv().entrySet()) {
-      System.out.println((envvar.getKey() + ": " + envvar.getValue()));
-    }
+  return ("Hello, SpringBoot on Wildfly");
     
-    return new ResponseEntity<>("Hello there, I am running :0)", HttpStatus.OK);
+    //return new ResponseEntity<>("Hello there, I am running :0)", HttpStatus.OK);
     
   }
   
